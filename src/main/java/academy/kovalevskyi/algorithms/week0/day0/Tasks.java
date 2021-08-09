@@ -23,7 +23,7 @@ public class Tasks {
     return true;
   }
 
-  public static boolean sameCharactersO1(String left, String right) {
+  /*public static boolean sameCharactersO1(String left, String right) {
     if (left.length() != right.length()) {
       return false;
     }
@@ -39,5 +39,25 @@ public class Tasks {
       rightLeft.remove(character);
     }
     return rightLeft.isEmpty();
+  }*/
+
+  public static boolean sameCharactersO1(String left, String right) {
+    if (left.length() != right.length()) {
+      return false;
+    }
+
+    char[] leftArray = new char[256];
+
+    for (int i = 0; i < left.length(); i++) {
+      leftArray[left.charAt(i)]++;
+    }
+
+    for (int i = 0; i < right.length(); i++) {
+      leftArray[right.charAt(i)]--;
+      if (leftArray[right.charAt(i)] < 0) {
+        return false;
+      }
+    }
+    return true;
   }
 }
