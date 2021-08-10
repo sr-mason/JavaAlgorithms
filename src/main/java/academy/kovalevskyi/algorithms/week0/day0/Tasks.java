@@ -1,8 +1,5 @@
 package academy.kovalevskyi.algorithms.week0.day0;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Tasks {
 
   public static boolean sameCharactersSorting(String left, String right) {
@@ -46,7 +43,7 @@ public class Tasks {
       return false;
     }
 
-    char[] leftArray = new char[256];
+    int[] leftArray = new int[256];
 
     for (int i = 0; i < left.length(); i++) {
       leftArray[left.charAt(i)]++;
