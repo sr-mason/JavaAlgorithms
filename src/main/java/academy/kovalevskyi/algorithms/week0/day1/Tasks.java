@@ -27,7 +27,7 @@ public class Tasks {
     }
     Node first = start;
     Node second = start;
-    while (first.next != null && second.next != null && second.next.next != null) {
+    while (second.next != null && second.next.next != null) {
       first = first.next;
       second = second.next.next;
       if (first == second) {
