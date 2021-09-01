@@ -9,7 +9,7 @@ public class MergeSort implements Sort {
   @Override
   public <T> void sort(T[] target, Comparator<T> comparator) {
     T[] temp = sortMerge(target, comparator);
-    System.arraycopy(temp, 0, target, 0 , target.length);
+    System.arraycopy(temp, 0, target, 0, target.length);
   }
 
   protected   <T> T[] sortMerge(T[] target, Comparator<T> comparator) {
